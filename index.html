@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>El Hawary Development</title>
+  <meta name="description" content="El Hawary Development — Building the future of real estate with excellence.">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --gold: #d4af37;
+      --gold-soft: rgba(212,175,55,0.12);
+      --bg-dark: #050505;
+      --glass: rgba(255,255,255,0.03);
+      --text-muted: rgba(255,255,255,0.75);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background-color:var(--bg-dark);
+      /* background image file (put bg.jpg in same folder) */
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* fixed as requested */
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:32px 20px;
+    }
+
+    /* dark overlay to make image very muted (very transparent skyline) */
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.72), rgba(0,0,0,0.72));
+      pointer-events:none;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background: linear-gradient(180deg, rgba(10,10,10,0.22), rgba(8,8,8,0.10));
+      border-radius:16px;
+      padding:28px 22px 20px;
+      box-shadow: 0 12px 40px rgba(2,2,2,0.7);
+      backdrop-filter: blur(6px);
+      position:relative;
+      z-index:2;
+      text-align:center;
+      margin-top:28px;
+    }
+
+    /* logo */
+    .logo-wrap{
+      margin-top:-18px; /* lift logo up */
+      margin-bottom:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo{
+      width:160px; /* bigger */
+      max-width:60%;
+      filter: drop-shadow(0 6px 18px rgba(212,175,55,0.18));
+    }
+    h1{
+      margin:10px 0 6px;
+      color:var(--gold);
+      font-size:20px;
+      letter-spacing:1px;
+      font-weight:700;
+    }
+    .tag{
+      margin:0 0 22px 0;
+      color: #cdbf86;
+      font-size:0.95rem;
+      font-weight:500;
+    }
+
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .btn{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid rgba(212,175,55,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      color:#fff;
+      font-weight:600;
+      transition: all .18s ease;
+      backdrop-filter: blur(2px);
+    }
+    .btn i{
+      color:var(--gold);
+      font-size:1.05rem;
+      width:20px;
+      text-align:center;
+    }
+    .btn:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      background: linear-gradient(180deg, rgba(212,175,55,0.06), rgba(212,175,55,0.03));
+    }
+
+    /* small label to right (for call shows number) */
+    .btn .label{
+      display:inline-block;
+      font-size:0.95rem;
+      color: #fff;
+    }
+
+    /* email at bottom */
+    .email{
+      margin-top:14px;
+      padding-top:10px;
+      border-top:1px solid rgba(255,255,255,0.04);
+      color: #d6c99a;
+      font-weight:600;
+      font-size:0.95rem;
+      letter-spacing:0.2px;
+    }
+
+    footer{
+      margin-top:18px;
+      text-align:center;
+      font-size:12px;
+      color:rgba(255,255,255,0.45);
+    }
+
+    /* responsive tweaks */
+    @media (max-width:420px){
+      .card{padding:22px 18px}
+      .logo{width:170px}
+      .btn{padding:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-label="El Hawary Development Links">
+    <div class="logo-wrap">
+      <img src="Gold.png" alt="El Hawary Development Logo" class="logo">
+    </div>
+
+    <h1>El Hawary Development</h1>
+    <p class="tag">Building the future of real estate with excellence.</p>
+
+    <div class="links">
+      <!-- Call -->
+      <a class="btn" href="tel:01212062222" target="_blank" rel="noopener">
+        <i class="fas fa-phone"></i>
+        <span class="label">Call</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="btn" href="https://wa.me/201212062222" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span class="label">WhatsApp</span>
+      </a>
+
+      <!-- Facebook -->
+      <a class="btn" href="https://www.facebook.com/ELHawaryDevelopment/?rdid=zJ0nDxVmOaXH1SpG" target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+        <span class="label">Facebook</span>
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn" href="https://instagram.com/hawari.development" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+        <span class="label">Instagram</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a class="btn" href="https://www.linkedin.com/company/el-hawari-development" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+        <span class="label">LinkedIn</span>
+      </a>
+
+      <!-- TikTok -->
+      <a class="btn" href="https://tiktok.com/@hawari.development" target="_blank" rel="noopener">
+        <i class="fab fa-tiktok"></i>
+        <span class="label">TikTok</span>
+      </a>
+    </div>
+
+    <div class="email">
+      <a href="mailto:hawaridevelopment@gmail.com" style="color:inherit;text-decoration:none">hawaridevelopment@gmail.com</a>
+    </div>
+
+    <footer>© El Hawary Development | All Rights Reserved</footer>
+  </div>
+</body>
+</html>
